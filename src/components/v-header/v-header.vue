@@ -1,5 +1,8 @@
 <template>
-  <div class="header">header</div>
+  <div class="header">
+    <div class="header-top">top</div>
+    <div class="header-bottom">bottom</div>
+  </div>
 </template>
 <script>
 
