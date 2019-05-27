@@ -1,10 +1,15 @@
-
+const path = require('path')
 const appData = require('./data.json')
 const seller = appData.seller
 const goods = appData.goods
 const ratings = appData.ratings
 
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 module.exports = {
+  baseUrl: './',
+  assetsDir: 'static',
   css: {
     loaderOptions: {
       stylus: {
@@ -42,5 +47,16 @@ module.exports = {
         })
       })
     }
+  },
+  chainWebpack(config) {
+    config.resolve.alias
+      .set('components', resolve('src/components'))
+      .set('common', resolve('src/common'))
+    // config
+    //   .entry('index')
+    //     .add('src/index.js')
+    //   .output
+    //     .path('dist')
+    //     .filename('[name].bundle.js')
   }
 }
