@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import './cube-ui'
 import App from './App.vue'
-import 'amfe-flexible'
+// rem 插件
+// import 'amfe-flexible'
 
 Vue.config.productionTip = false
 
